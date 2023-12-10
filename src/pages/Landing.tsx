@@ -1,7 +1,10 @@
+import Hero from "../components/modules/Landing/Hero"
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div className="px-28 py-28">
+      <Hero />
+    </div>
   )
 }
 
