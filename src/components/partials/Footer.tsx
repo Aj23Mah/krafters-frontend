@@ -11,14 +11,14 @@ import { SiInstagram } from "react-icons/si";
 const Footer = () => {
   return (
     <>
-      <section className="footer-section h-auto w-full bg-gray-300 pl-32 pr-32 pt-20 pb-20">
-        <div className="footer-container h-full w-full">
-          <div className="footer-content flex justify-between flex-wrap  border-b pb-6">
-            <div className="footer-box">
-              <div className="image h-20 w-40 mb-8">
+      <section className="h-auto w-full bg-gray-300 px-32 py-20">
+        <div className="h-full w-full">
+          <div className="flex justify-between flex-wrap  border-b pb-6">
+            <div>
+              <div className="h-20 w-40 mb-8">
                 <img src={logo} alt="logo" className="w-full h-full"/>
               </div>
-              <div className='info text-sm font-normal'>
+              <div className='text-sm font-normal'>
                 <div className='flex mb-3'>
                   <div className='text-lg font-medium mr-3'>
                     <CiMobile2 />
@@ -53,21 +53,21 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="footer-box text-sm font-normal">
+            <div className="text-sm font-normal">
               <div className='text-lg font-medium mb-2'>QUICK LINKS</div>
               <div className='mb-2'>About Us</div>
               <div className='mb-2'>Work With Us</div>
               <div className='mb-2'>Meet the Team</div>
               <div className='mb-2'>Vacancies</div>
             </div>
-            <div className="footer-box text-sm font-normal">
+            <div className="text-sm font-normal">
               <div  className='text-lg font-medium mb-2'>Navigation</div>
               <div className='mb-2'>Home</div>
               <div className='mb-2'>Categories</div>
               <div className='mb-2'>Explore</div>
               <div className='mb-2'>Contacts</div>
             </div>
-            <div className="footer-box text-sm font-normal">
+            <div className="text-sm font-normal">
               <div  className='text-lg font-medium mb-2'>NEED HELP?</div>
               <div className='mb-2'>FAQ</div>
               <div className='mb-2'>connect with us</div>
