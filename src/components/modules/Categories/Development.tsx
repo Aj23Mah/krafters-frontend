@@ -1,5 +1,6 @@
 import heroImg from "../../../assets/images/hero-img.png";
 import newspaper from "../../../assets/images/newspaper.png";
+import Ongoingcource from "./Ongoingcource";
 
 const Development = () => {
   return (
@@ -29,6 +30,7 @@ const Development = () => {
           <img src={newspaper} alt="" />
         </div>
       </div>
+      <Ongoingcource />
     </div>
   );
 };

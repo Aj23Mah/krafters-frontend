@@ -1,8 +1,11 @@
 
+import Hero from './../components/modules/Landing/Hero';
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div>
+      <Hero />
+    </div>
   )
 }
 
