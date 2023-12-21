@@ -92,7 +92,9 @@ const Nav = () => {
         </div>
 
         <div className="w-[50px]">
-          <img src={userIcon} alt="" />
+          <Link to='/log-in'>
+            <img src={userIcon} alt="" />
+          </Link>
         </div>
 
         <div
