@@ -2,7 +2,7 @@
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <div className="h-screen w-full">Hero</div>
   )
 }
 
