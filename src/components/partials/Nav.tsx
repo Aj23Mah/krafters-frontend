@@ -27,82 +27,83 @@ const Nav = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <nav className="shadow-sm w-full fixed top-0 left-0 z-50">
-      <div className="flex items-center justify-between bg-gray-200 py-2 md:px-20 px-7">
-        <div className="mr-2 mb-2">
-          <img src={logo} alt="" className="w-[100px]" />
+    <nav className="shadow-md w-full sticky top-none z-50">
+      <div className="flex items-center justify-between bg-white md:px-[8rem] px-lg py-xs">
+        <div className="mr-xs mb-xs">
+          <img src={logo} alt="" className="w-full" />
         </div>
 
-        <div
-          className="lg:flex items-center justify-between overflow-hidden border border-solid border-black w-[50%] rounded-full px-4 py-1
-          hidden"
-        >
-          <div className="cursor-pointer mr-1">
-            <AiOutlineSearch size={28} />
-          </div>
-          <div className="w-full mr-2">
-            <input
-              type="text"
-              placeholder="Search"
-              className="p-1 w-full text-lg outline-none bg-gray-200"
-            />
-          </div>
-        </div>
-
-        <div className="lg:hidden">
+        <div className="flex w-full justify-end items-center border-2 border-red-500">
           <div
-            className="cursor-pointer mr-1"
-            onClick={() => setIsSearchOpen(!isSearchOpen)}
+            className="lg:flex items-center justify-between overflow-hidden border border-solid border-black w-[50%] rounded-full px-xs
+          hidden"
           >
-            {isSearchOpen ? (
-              <AiOutlineClose size={32} />
-            ) : (
-              <AiOutlineSearch size={32} />
-            )}
-          </div>
-          {isSearchOpen && (
-            // <div className="flex items-center px-2 bg-white overflow-hidden border border-black rounded-full md:absolute md:top-20 top-[-490px] w-full md:w-auto transition-all duration-500 ease-in">
-            <div className="flex items-center px-2 bg-white overflow-hidden border border-black rounded-full absolute top-20 lg:top-[-490px] w-auto transition-all duration-500 ease-in">
+            <div className="cursor-pointer mr-[2px]">
+              <AiOutlineSearch size={30} />
+            </div>
+            <div className="w-full mr-xs">
               <input
                 type="text"
-                className="p-2 w-full border-none outline-none"
                 placeholder="Search"
+                className="p-xs w-full text-lg border-none outline-none bg-white"
               />
             </div>
-          )}
-        </div>
-
-        <div
-          className={`cursor-pointer md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in 
-          ${isMenuOpen ? "top-14 opacity-100" : "top-[-490px]"} md:opacity-100`}
-        >
-          {navItems.map((v, key) => (
+          </div>
+          <div className="lg:hidden">
             <div
-              key={key}
-              className="md:ml-8 text-xl font-semibold md:my-0 my-7"
+              className="cursor-pointer mr-[2px]"
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
             >
-              <div className="flex items-center duration-500 text-center">
-                {/* <div className="mr-1">{v.icon}</div> */}
-                {/* <div> */}
-                  <Link to={v.path}>{v.label}</Link>
-                {/* </div> */}
-              </div>
+              {isSearchOpen ? (
+                <AiOutlineClose size={32} />
+              ) : (
+                <AiOutlineSearch size={32} />
+              )}
             </div>
-          ))}
-        </div>
-
-        <div className="w-[50px]">
-          <Link to='/log-in'>
-            <img src={userIcon} alt="" />
-          </Link>
-        </div>
-
-        <div
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-3xl cursor-pointer md:hidden"
-          // absolute right-8 top-5
-        >
-          {isMenuOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+            {isSearchOpen && (
+              <div className="flex items-center px-xs bg-white overflow-hidden border border-black rounded-full absolute top-[90px] lg:top-[-490px] w-auto transition-all duration-500 ease-in">
+                <input
+                  type="text"
+                  className="p-xs w-full border-none outline-none"
+                  placeholder="Search"
+                />
+              </div>
+            )}
+          </div>
+          <div
+            className={`cursor-pointer md:flex md:items-center md:pb-none pb-xl absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-none pl-lg transition-all duration-500 ease-in 
+          ${
+            isMenuOpen ? "top-xxl opacity-100" : "top-[-490px]"
+          } md:opacity-100`}
+          >
+            {navItems.map((v, key) => (
+              <div
+                key={key}
+                className="md:ml-lg text-xl font-semibold md:my-none my-md"
+              >
+                <div className="flex items-center justify-center duration-500">
+                  {/* <div className="mr-1">{v.icon}</div> */}
+                  {/* <div> */}
+                  <Link to={v.path} className="no-underline text-black">
+                    {v.label}
+                  </Link>
+                  {/* </div> */}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="w-[50px] ml-md">
+            <Link to="/log-in">
+              <img src={userIcon} alt="" />
+            </Link>
+          </div>
+          <div
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="ml-lg text-3xl cursor-pointer md:hidden"
+            // absolute right-8 top-5
+          >
+            {isMenuOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+          </div>
         </div>
       </div>
     </nav>
