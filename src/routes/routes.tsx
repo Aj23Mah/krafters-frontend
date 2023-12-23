@@ -1,3 +1,4 @@
+
 import Landing from "../pages/Landing";
 import Search from "../pages/Search";
 import Details from "../pages/Details";
@@ -5,7 +6,6 @@ import Development from "../components/modules/Categories/Development";
 import Login from "../components/common/Login";
 import Forgetpassword from "../components/common/Forgetpassword";
 import Signup from "./../components/common/Signup";
-import { BasicAppShell } from "../components/Dashboard/BasicAppShell";
 import Error from "../pages/Error";
 
 export const PRIMARY_ROUTES = [
@@ -16,6 +16,5 @@ export const PRIMARY_ROUTES = [
   { path: "/sign-up", element: <Signup /> },
   { path: "/log-in", element: <Login /> },
   { path: "/forget-password", element: <Forgetpassword /> },
-  { path: "/appshell", element: <BasicAppShell /> },
   { path: "*", element: <Error /> },
 ];

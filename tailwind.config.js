@@ -1,20 +1,4 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [
-//     "./index.html",
-//     "./src/**/*.{js,ts,jsx,tsx}",
-//   ],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
 
-/*
- * Copyright (c) 2023 Groupado.
- * All rights reserved.
- * Redistribution and use in source and binary forms, with or without modification, are not permitted.
- */
 
 const colors = require('tailwindcss/colors')
 delete colors['lightBlue']

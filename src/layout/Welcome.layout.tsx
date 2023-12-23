@@ -1,5 +1,3 @@
-
-
 import Nav from '../components/partials/Nav'
 import PrimaryRoute from "../routes";
 import Footer from "../components/partials/Footer";
