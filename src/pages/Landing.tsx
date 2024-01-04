@@ -1,8 +1,8 @@
-import r from "../../../assets/images/RDNE-Stock.png";
-import g from "../../../assets/images/green-box.png";
+import r from "../assets/images/RDNE-Stock.png"
+import g from "../assets/images/green-box.png"
 import { LiaPlayCircleSolid } from "react-icons/lia";
-import arrow from "../../../assets/images/arrow.png";
-import newspaper from "../../../assets/images/newspaper.png";
+import arrow from "../assets/images/arrow.png"
+import newspaper from "../assets/images/newspaper.png"
 
 const Hero = () => {
   return (
