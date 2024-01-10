@@ -1,0 +1,46 @@
+.hero-text1 {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .hero-text2 {
+    font-weight: 700;
+    font-size: 90px;
+  }
+
+@media only screen and (max-width: 1240px) {
+    .hero-text1 {
+        font-weight: 700;
+        font-size: x-large;
+      }
+      .hero-text2 {
+        font-weight: 700;
+        font-size: 64px;
+      }
+    .arrow {
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 940px) {
+    .hero_section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .text-area {
+        margin-bottom: 20px;
+    }
+  }
+
+@media only screen and (max-width: 1023px) {
+    .img {
+        height: 100%;
+    }
+    .green-box, .newspaper {
+        display: none;
+    }
+    .text-area {
+        margin-right: 20px;
+    }
+}

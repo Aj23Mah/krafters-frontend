@@ -1,51 +1,107 @@
-import r from "../../../assets/images/RDNE-Stock.png";
-import g from "../../../assets/images/green-box.png";
+import landing_img from "../../../assets/images/RDNE-Stock.png";
+import greenbox from "../../../assets/images/green-box.png";
 import { LiaPlayCircleSolid } from "react-icons/lia";
 import arrow from "../../../assets/images/arrow.png";
 import newspaper from "../../../assets/images/newspaper.png";
+import { IoCubeOutline } from "react-icons/io5";
+import { TbUsersGroup } from "react-icons/tb";
+import { GrProjects } from "react-icons/gr";
+import { FaPeoplePulling } from "react-icons/fa6";
+import Courses from "./Courses";
+import "../../../assets/scss/Hero.scss";
 
 const Hero = () => {
   return (
-
-    <div className='h-auto w-full relative p-16'>
-        <div className="h-full w-full flex items-center justify-between lg:flex-row flex-col">
-          <div className="w-3/5">
-            <h3 className='text-3xl font-bold pb-6'>Unlock Your IT Potential</h3>
-            <h1 className='text-6xl font-bold pb-6'>Be Work Ready</h1>
-              <p className='font-normal text-base w-80 pb-6'>Explore Krafter's selection of React courses to acquire proficiency in coding with this highly valuable language.</p>
-            <div className="relative inline-block px-4 py-2 font-medium group">
-              <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-              <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-              <span className="relative text-black group-hover:text-white flex items-center">Explore Krafters <div className='text-2xl'><LiaPlayCircleSolid /></div></span> 
+    <div className="overflow-hidden">
+      <div className="lg:px-[180px] p-xxl lg:py-[100px] flex items-center w-full h-full hero_section">
+        <div className="lg:w-1/2 text-area">
+          <div className="hero-text1">
+            Unlock Your IT Potential
+          </div>
+          <div className="hero-text2">
+            Be Work Ready
+          </div>
+          <div className="flex justify-between w-[90%]">
+            <div className="lg:w-[58%] w-full text-lg">
+              Explore Krafter's selection of React courses to acquire
+              proficiency in coding with this highly valuable language.
+            </div>
+            <div className="lg:block">
+              <img src={arrow} alt="arrow" className="arrow" />
             </div>
           </div>
-          <div className='flex'>
-            <div>
-              <div className="h-80 w-48">
-                <img src={r} alt="office1" className="h-full w-full"/>
-              </div>
-              <div className="h-10 w-10 float-right">
-                <img src={g} alt="office1" className="h-full w-full"/>
-              </div>
-            </div>
-            <div>
-              <div className="h-40 w-52">
-                <img src={r} alt="office1" className="h-full w-full"/>
-              </div>
-              <div className="h-52 w-52">
-                <img src={r} alt="office1" className="h-full w-full"/>
-              </div>
+          <div className="border-solid flex lg:w-1/2 justify-center mt-sm ">
+            <div className="font-bold md:text-xl text-md">Explore Krafters</div>
+            <div className="text-2xl flex items-center">
+              <LiaPlayCircleSolid />
             </div>
           </div>
         </div>
-        <div className='h-28 w-28 absolute top-60 left-[420px] hidden lg:block'>
-          <img src={arrow} alt="arrow" className='w-full'/>
-        </div>
-          <div className='absolute bottom-0 right-0 z-[-1] hidden lg:block'>
-            <img src={newspaper} alt="newspaper" className=''/>
+        <div className="h-full lg:w-1/2 relative image-area">
+          <div className="grid grid-cols-2 gap-md">
+            <div className="row-span-2">
+              <img src={landing_img} alt="" height="90%" width="100%" className="img"/>
+              <div className="flex justify-end items-end">
+                <img src={greenbox} alt="" className="green-box"/>
+              </div>
+            </div>
+            <div className="">
+              <img src={landing_img} alt="" height="100%" width="100%" />
+            </div>
+            <div className="">
+              <img src={landing_img} alt="" height="100%" width="100%" />
+            </div>
           </div>
+          <div className="absolute right-[-75px] bottom-[-75px] z-[-99]">
+            <img src={newspaper} alt="img" className="newspaper" />
+          </div>
+        </div>
+      </div>
+      <div className="lg:flex justify-center p-xxl hidden">
+        <div className="flex justify-evenly w-full">
+          <div className="flex items-center">
+            <div className="pr-xs">
+              <IoCubeOutline size={80} />
+            </div>
+            <div>
+              <div className="text-5xl font-black">10 +</div>
+              <div className="text-2xl">Years</div>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="pr-xs">
+              <TbUsersGroup size={80} />
+            </div>
+            <div>
+              <div className="text-5xl font-black">250 +</div>
+              <div className="text-2xl">Clients</div>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="pr-xs">
+              <GrProjects size={70} />
+            </div>
+            <div>
+              <div className="text-5xl font-black">500 +</div>
+              <div className="text-2xl">Projects</div>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="pr-xs">
+              <FaPeoplePulling size={70} />
+            </div>
+            <div>
+              <div className="text-5xl font-black">12</div>
+              <div className="text-2xl">Clients</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Courses />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Hero;

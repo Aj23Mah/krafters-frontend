@@ -71,10 +71,11 @@ const Nav = () => {
             )}
           </div>
           <div
-            className={`cursor-pointer md:flex md:items-center md:pb-none pb-xl absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-none pl-lg transition-all duration-500 ease-in 
+            className={`cursor-pointer md:flex md:items-center md:pb-none pt-md absolute md:static md:z-auto z-[-1] left-none w-full md:w-auto md:pl-none pl-lg transition-all duration-500 ease-in bg-white
           ${
             isMenuOpen ? "top-xxl opacity-100" : "top-[-490px]"
-          } md:opacity-100`}
+          } 
+          md:opacity-100 bg-opacity-70`}
           >
             {navItems.map((v, key) => (
               <div
