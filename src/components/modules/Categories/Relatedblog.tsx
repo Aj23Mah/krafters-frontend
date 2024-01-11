@@ -75,6 +75,9 @@ const Relatedblog = () => {
       <div className="md:text-3xl text-xl text-center md:font-bold font-semibold mb-md text-white">
         Related Blog
       </div>
+      <div className="underline flex justify-end text-base text-white mb-md cursor-pointer hover:no-underline">
+          Explore All
+        </div>
       <div>
         <Carousel
           // withIndicators
