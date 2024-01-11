@@ -75,6 +75,45 @@ const Relatedblog = () => {
       <div className="md:text-3xl text-xl text-center md:font-bold font-semibold mb-md text-white">
         Related Blog
       </div>
+      <div className="underline flex justify-end text-base text-white mb-md cursor-pointer hover:no-underline">
+          Explore All
+        </div>
+      <div>
+        <Carousel
+          // withIndicators
+          height={500}
+          // slideSize="25%"
+          slideSize={{ base: "100%", sm: "25%", md: "25%" }}
+          // controlsOffset={}
+          controlSize={30}
+          // slideGap="md"
+          loop
+          align="start"
+          slidesToScroll={1}
+          className="outline outline-solid outline-white text-white p-xl"
+        >
+          {courseItem.map((v, key) => (
+            // <div key={key}>
+            <Carousel.Slide key={key}>
+              <div className="p-xs">
+                <div>
+                  <img src={v.imgUrl} className="w-[400px]" alt="" />
+                </div>
+                <div className="py-xs">
+                  <div className="bg-white text-black w-[40%] text-center rounded-sm py-xs">
+                    Technology
+                  </div>
+                  <div className="md:text-3xl text-lg font-bold mb-xs">
+                    {v.detail}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="mr-xs">
+                        <img src={v.userUrl} alt="" />
+                      </div>
+                      <div className="md:text-md text-sm">{v.userName}</div>
+                    </div>
+                    <div className="md:text-md text-sm">{v.date}</div>
       <Carousel
         // withIndicators
         height={500}
