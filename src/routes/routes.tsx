@@ -6,6 +6,7 @@ import Development from "../components/modules/Categories/Development";
 import Login from "../components/common/Login";
 import Forgetpassword from "../components/common/Forgetpassword";
 import Signup from "./../components/common/Signup";
+import Contact from "../components/modules/contact/Contact";
 import Error from "../pages/Error";
 
 export const PRIMARY_ROUTES = [
@@ -16,5 +17,6 @@ export const PRIMARY_ROUTES = [
   { path: "/sign-up", element: <Signup /> },
   { path: "/log-in", element: <Login /> },
   { path: "/forget-password", element: <Forgetpassword /> },
+  { path: "/contact", element: <Contact /> },
   { path: "*", element: <Error /> },
 ];
