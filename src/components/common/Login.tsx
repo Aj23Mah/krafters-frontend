@@ -2,35 +2,53 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import signImg from "../../assets/images/login-img.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
-    email: "",
+    identifier: "",
     password: "",
   });
-  const { email, password } = formData;
+  const { identifier, password } = formData;
   function onChange(error: any) {
     setFormData((prevState) => ({
       ...prevState,
       [error.target.id]: error.target.value,
     }));
   }
+  console.log(formData);
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:3330/authentication",
+        formData
+      );
+      console.log(response.data);
+      // console.log("loging sucessfull");
+      toast.success('Product added sucessfully')
+    } catch (error) {
+      // console.error(error);
+      toast.error(error.message);
+    }
+  };
 
   return (
-    <div className="flex justify-center flex-wrap items-center py-xl max-w-[70%] mx-auto">  {/* px-md max-w-6xl mx-auto */}
+    <div className="flex justify-center flex-wrap items-center py-xl max-w-[70%] mx-auto">
+      {" "}
+      {/* px-md max-w-6xl mx-auto */}
       <div className="md:w-[67%] lg:w-[40%] mb-xl md:mb-md lg:mr-xxl">
         <img src={signImg} alt="Key" className="w-full rounded-2xl" />
       </div>
       <div className="lg:mr-xxl">
         <h1 className="text-3xl text-center mb-md font-bold">Log In</h1>
-        <form
-        // onSubmit={onSubmit}
-        >
+        <form>
           <input
-            type="email"
-            id="email"
-            value={email}
+            type="text"
+            id="identifier"
+            value={identifier}
             onChange={onChange}
             placeholder="Email address"
             className="mb-md w-full px-sm py-xs text-xl text-gray-700 bg-white border border-gray-300 outline-none rounded transition ease-in-out"
@@ -79,7 +97,8 @@ const Login = () => {
 
           <button
             className="w-full bg-blue-600 text-white py-xs text-sm font-medium uppercase rounded shadow-md hover:bg-blue-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue-800"
-            type="submit"
+            type="button"
+            onClick={handleSubmit}
           >
             Log in
           </button>

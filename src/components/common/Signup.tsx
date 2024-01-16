@@ -2,7 +2,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import signImg from "../../assets/images/login-img.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,20 +20,20 @@ const Signup = () => {
   }
   // console.log(formData)
 
-  const handleSubmit = () => {
-    // e.preventDefault()
-    // const res = await fetch('http://localhost:3000/auth/sign-up', formData)
-    // const data = await res.json();
-    // console.log(data);
-    axios
-      .post("http://localhost:3000/auth/sign-up", formData)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const handleSubmit = () => {
+  //   // e.preventDefault()
+  //   // const res = await fetch('http://localhost:3000/auth/sign-up', formData)
+  //   // const data = await res.json();
+  //   // console.log(data);
+  //   axios
+  //     .post("http://localhost:3330/authentication", formData)
+  //     .then((response) => {
+  //       console.log(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <div className="flex justify-center flex-wrap items-center py-xl max-w-[70%] mx-auto">
@@ -43,7 +43,7 @@ const Signup = () => {
       </div>
       <div className="lg:mr-xxl">
         <h1 className="text-3xl text-center mb-md font-bold">Sign Up</h1>
-        <form onSubmit={handleSubmit}>
+        <form>
           <input
             type="text"
             id="name"
@@ -103,6 +103,7 @@ const Signup = () => {
           </div>
 
           <button
+            // onSubmit={handleSubmit}
             className="w-full bg-blue-600 text-white py-xs text-sm font-medium uppercase rounded shadow-md hover:bg-blue-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue-800"
             type="submit"
           >
